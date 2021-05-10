@@ -122,7 +122,7 @@ if (localStorage.getItem("tick2") === "true") {
 
 // filtru spalva pakeicia onclick (changeFilter)
 function chFilter(id, type) {
-    let target = document.getElementById(id);
+    const target = document.getElementById(id);
 
     if (id.includes("type")) {
         document.getElementById(localStorage.getItem("typeActiveID")).classList.remove("active");
@@ -137,19 +137,15 @@ function chFilter(id, type) {
         }
     }
 
-    if (id.includes("tick")) {
-        // tick1 ir tick2 ir contains(active)
-        if (localStorage.getItem("tick1") === "true" && localStorage.getItem("tick2") === "true" && target.classList.contains("active"))
-        {
-            target.classList.remove("active");
-            localStorage.setItem(id, "false");
-        } 
-        // tick1 arba tick2 ir NOT contains(active)
-        else if (localStorage.getItem("tick1") === "true" || localStorage.getItem("tick2") === "true" && !target.classList.contains("active"))
-        {
-            target.classList.add("active");
-            localStorage.setItem(id, "true");
-        }
+    if (id.includes("tick1") && !target.classList.contains("active")) {
+        target.classList.add("active");
+        localStorage.setItem(id, "true");
+        document.getElementById("tick2").classList.remove("active");
+    }
+    else if (id.includes("tick2") && !target.classList.contains("active")) {
+        target.classList.add("active");
+        localStorage.setItem(id, "true");
+        document.getElementById("tick1").classList.remove("active");
     }
 }
 

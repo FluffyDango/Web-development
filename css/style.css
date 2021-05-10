@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FEFFFE;
+    font-size: 1rem;
 }
 
 a {
@@ -19,13 +20,11 @@ a {
 h1 {
     font-family: 'Patua One', cursive;
     letter-spacing: 5px;
-    font-size: 3vw;
 }
 
 h2 {
     font-family: 'Patua One', cursive;
     letter-spacing: 5px;
-    font-size: 1.75vw;
     font-weight: bold;
 }
 
@@ -34,7 +33,6 @@ h3 {
     font-weight: 800;
     letter-spacing: 0.5px;
     line-height: 0px;
-    font-size: 0.7vw;
     color: #1C1E21;
     text-decoration: none;
 }
@@ -44,7 +42,6 @@ h4 {
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 0px;
-    font-size: 0.65vw;
     margin-top: -10px;
     margin-bottom: 5px;
     color: #41444b;
@@ -230,7 +227,7 @@ h4 {
     position: relative;
 }
 
-.smokeModeSwitch input {
+.ModeSwitch input {
     position: absolute;
     opacity: 0;
     width: 0;
@@ -258,7 +255,7 @@ h4 {
     left: -1.25vh;
 }
 
-.smokeModeSwitch input:checked + .slider:before {
+.ModeSwitch input:checked + .slider:before {
     transform: translateX(3vh);
     background-color: #D62828;
 }
