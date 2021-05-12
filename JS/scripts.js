@@ -139,12 +139,14 @@ function chFilter(id, type) {
 
     if (id.includes("tick1") && !target.classList.contains("active")) {
         target.classList.add("active");
-        localStorage.setItem(id, "true");
+        localStorage.setItem("tick1", "true");
+        localStorage.setItem("tick2", "false");
         document.getElementById("tick2").classList.remove("active");
     }
     else if (id.includes("tick2") && !target.classList.contains("active")) {
         target.classList.add("active");
-        localStorage.setItem(id, "true");
+        localStorage.setItem("tick2", "true");
+        localStorage.setItem("tick1", "false");
         document.getElementById("tick1").classList.remove("active");
     }
 }
