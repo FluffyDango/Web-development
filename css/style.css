@@ -439,13 +439,13 @@ main {
     letter-spacing: 1pt;
 }
 
-#photoVideoBtn {
+#smokeBtns {
     position: absolute;
     display: inline-block;
     visibility: hidden;
     top: 48%;
     transform: translateY(-50%);
-    right: 3%;
+    right: 3.2%;
     width: 7%;
 
     font-family: 'Montserrat';
@@ -455,13 +455,24 @@ main {
     font-size: 0.8em;
 }
 
+#btnDescription {
+    margin-top: 1em;
+}
 #photoVideoBtn i {
     margin-top: 0.2em;
     cursor: pointer;
     border-radius: 0.4rem;
     padding: 0.2em 0.4em;
     background-color: #DE9B35;
-    border: 2px solid  rgb(102, 102, 102);
+    border: 2px solid  rgb(68, 68, 68);
+}
+#smokeShareBtn i {
+    margin-top: 0.2em;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 0.2em 0.4em;
+    background-color: #357ede;
+    border: 2px solid  rgb(68, 68, 68);
 }
 
 

@@ -1,8 +1,24 @@
 "use strict";
 
 function preloadPage() {
-    // const params = new URLSearchParams(window.location.search);
-    // let currentMap = params.get('map');
+    const params = new URLSearchParams(window.location.search);
+    
+    var arr = location.href.split('?');
+    if (arr.length > 1) {
+        let mapParam = params.get('map');
+        let locParam = params.get('loc');
+        let idParam = params.get('id');
+        
+        localStorage.setItem('currentMap', mapParam);
+
+        showPopup();
+        getDataImg(locParam, idParam);
+
+        //pasalina parametrus, kad refresh'inus puslapi neismestu is naujo popup'o
+        var newURL = location.href.split("?")[0];
+        window.history.pushState('object', document.title, newURL);
+    }
+
     if ('null' === localStorage.getItem('currentMap')) {
         localStorage.setItem('currentMap', 'mirage');
     }

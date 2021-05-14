@@ -12,6 +12,7 @@ const mapMainImg = document.getElementById('mapMainImg');
 const photoVideoBtn = document.getElementById('photoVideoBtn');
 const imgBackIcon = document.getElementById('imgBackIcon');
 const photoVideoSwap = document.getElementById('photoVideoSwap');
+const smokeShareBtn = document.getElementById('smokeShareBtn');
 const popupPhoto = document.getElementById('popupPhoto');
 
 function escapePopup(event) {
@@ -36,6 +37,7 @@ function hidePopup() {
     mainPopup.style.visibility = "hidden";
     photoVideoBtn.style.visibility = "hidden";
     imgBackIcon.style.visibility = "hidden";
+    smokeShareBtn.style.visibility = "hidden";
     mainPopup.style.opacity = "0";
     quitVideo();
 
@@ -51,6 +53,7 @@ function backPage(loc) {
     getData(loc);
     quitVideo();
     photoVideoBtn.style.visibility = "hidden";
+    smokeShareBtn.style.visibility = "hidden";
     imgBackIcon.style.visibility = "hidden";
 }
 
@@ -98,6 +101,12 @@ function browseImagesKeyEvent(e) {
         document.getElementById('imgSrc').src = images[index];
         document.getElementById('smokeInstructions').innerHTML = instructions[index];
     }
+}
+
+// share mygtukas
+function shareSmoke(map, loc, id) {
+    let smokeParameters = location.hostname + ":" + location.port + location.pathname + "?map=" + map + "&loc=" + loc + "&id=" + id;
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", smokeParameters);
 }
 
 

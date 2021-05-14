@@ -41,7 +41,6 @@
             <img id="mapMainImg" draggable="false">
             <div id="smokeIconHolder">
             </div>
-            
         </div>
 
         <!-- popup'as -->
@@ -54,9 +53,15 @@
                 <div class="popupPhoto" id="popupPhoto">
                     <img id="imgSrc"/>
                 </div>
-                <div id='photoVideoBtn' onclick='playVideo()'>
-                    <div id="btnDescription">Play video</div>
-                    <i class="fas fa-film fa-2x" id="photoVideoSwap"></i>
+                <div id='smokeBtns'>
+                    <div id='photoVideoBtn'>
+                        <div id="btnDescription">Play video</div>
+                        <i class="fas fa-film fa-2x" id="photoVideoSwap" onclick="playVideo()"></i>
+                    </div>
+                    <div id='smokeShareBtn'>
+                        <div id="btnDescription">Share</div>
+                        <i class="fas fa-share-alt fa-2x" id="smokeShare" onclick="shareSmoke()"></i>
+                    </div>
                 </div>
                 <section class="smokesListMap" id="JSONinfo"></section>
                 <i class="fas fa-times fa-2x" id="imgCloseIcon" onclick="hidePopup(); clearPopup()"></i>
