@@ -1,6 +1,5 @@
 "use strict";
 
-let smokeIconDiv = document.getElementById('smokeIconHolder');
 let map;
 
 function getIconData() {
@@ -19,29 +18,22 @@ function getIconData() {
 }
 
 function loadIcons() {
-    smokeIconDiv.innerHTML = "";
+    SMOKEICONHOLDER.innerHTML = "";
     let result = "";
+    let typeOfSmoke = "";
 
-    if (localStorage.getItem("typeActive") === "smoke") {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-cloud fa-2x smokeIcon' style='color: #d6d6d6; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
-        }
-    }
-    else if (localStorage.getItem("typeActive") === "molotov") {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-fire fa-2x smokeIcon' style='color: #e02d0d; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
-        }
-    }
-    else if (localStorage.getItem("typeActive") === "flash") {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-bolt fa-2x smokeIcon' style='color: #eecf20; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
-        }
-    }
-    else {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-bomb fa-2x smokeIcon' style='color: #000000; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
-        }
+    if (localStorage.getItem("typeActive") === "smoke")
+        typeOfSmoke = "<div class='fas fa-cloud fa-2x smokeIcon' style='color: #d6d6d6; ";
+    else if (localStorage.getItem("typeActive") === "molotov")
+        typeOfSmoke = "<div class='fas fa-fire fa-2x smokeIcon' style='color: #e02d0d; ";
+    else if (localStorage.getItem("typeActive") === "flash")
+        typeOfSmoke = "<div class='fas fa-bolt fa-2x smokeIcon' style='color: #eecf20; ";
+    else 
+        typeOfSmoke = "<div class='fas fa-bomb fa-2x smokeIcon' style='color: #000000; ";
+
+    for (let i = 0; i < Object.keys(map.bottom).length; i++) {
+        result += typeOfSmoke + "bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
     }
 
-    smokeIconDiv.innerHTML = result;
+    SMOKEICONHOLDER.innerHTML = result;
 }

@@ -2,18 +2,29 @@
 
 let index = 0;
 
-const next = document.getElementById('nextImg');
-const prev = document.getElementById('prevImg');
-const img = document.getElementById('imgSrc');
-const vid = document.getElementById('iframe');
-const instr = document.getElementById('smokeInstructions');
-const mainPopup = document.getElementById('mainPopup');
-const mapMainImg = document.getElementById('mapMainImg');
-const photoVideoBtn = document.getElementById('photoVideoBtn');
-const imgBackIcon = document.getElementById('imgBackIcon');
-const photoVideoSwap = document.getElementById('photoVideoSwap');
-const smokeShareBtn = document.getElementById('smokeShareBtn');
-const popupPhoto = document.getElementById('popupPhoto');
+const NEXT = document.getElementById('nextImg');
+const PREV = document.getElementById('prevImg');
+const IMG = document.getElementById('imgSrc');
+const VID = document.getElementById('iframe');
+const INSTR = document.getElementById('smokeInstructions');
+const MAINPOPUP = document.getElementById('mainPopup');
+const MAPMAINIMG = document.getElementById('mapMainImg');
+const PHOTOVIDEOBTN = document.getElementById('photoVideoBtn');
+const IMGBACKICON = document.getElementById('imgBackIcon');
+const PHOTOVIDEOSWAP = document.getElementById('photoVideoSwap');
+const POPUPPHOTO = document.getElementById('popupPhoto');
+const SMOKETITLE = document.getElementById('smokeTitle');
+const JSONINFO = document.getElementById('JSONinfo');
+const IFRAME = document.getElementById('iframe');
+const SMOKEICONHOLDER = document.getElementById('smokeIconHolder');
+const SMOKESHARE = document.getElementById('smokeShare');
+
+
+const SETTINGSID = document.getElementById('settingsId');
+const SETTINGSBUTTON = document.getElementById('settingsButton');
+
+const USERTHEME = document.getElementById('userTheme');
+const LOADVIDEOFIRST = document.getElementById('loadVideoFirst');
 
 function escapePopup(event) {
     if (event.key === 'Escape') {
@@ -22,8 +33,8 @@ function escapePopup(event) {
 }
 
 function showPopup() {
-    mainPopup.style.visibility = "visible";
-    mainPopup.style.opacity = "1";
+    MAINPOPUP.style.visibility = "visible";
+    MAINPOPUP.style.opacity = "1";
     document.body.style.overflow = "hidden";
     document.getElementById('popup').style.transform = "scale(1)";
 
@@ -34,17 +45,16 @@ function showPopup() {
 function hidePopup() {
     document.body.style.overflow = "visible";
     document.getElementById('popup').style.transform = "scale(0)";
-    mainPopup.style.visibility = "hidden";
-    photoVideoBtn.style.visibility = "hidden";
-    imgBackIcon.style.visibility = "hidden";
-    smokeShareBtn.style.visibility = "hidden";
-    mainPopup.style.opacity = "0";
+    MAINPOPUP.style.visibility = "hidden";
+    PHOTOVIDEOBTN.style.visibility = "hidden";
+    IMGBACKICON.style.visibility = "hidden";
+    MAINPOPUP.style.opacity = "0";
     quitVideo();
 
     document.removeEventListener("keydown", escapePopup);
     setTimeout(() => {
         clearPopup();
-        photoVideoBtn.style.visibility = "hidden";
+        PHOTOVIDEOBTN.style.visibility = "hidden";
     }, 100);
 }
 
@@ -52,9 +62,8 @@ function backPage(loc) {
     clearPopup();
     getData(loc);
     quitVideo();
-    photoVideoBtn.style.visibility = "hidden";
-    smokeShareBtn.style.visibility = "hidden";
-    imgBackIcon.style.visibility = "hidden";
+    PHOTOVIDEOBTN.style.visibility = "hidden";
+    IMGBACKICON.style.visibility = "hidden";
 }
 
 
@@ -66,8 +75,8 @@ function nextImage() {
     } else {
         index = 0;
     }
-    document.getElementById('imgSrc').src = images[index];
-    document.getElementById('smokeInstructions').innerHTML = instructions[index];
+    IMG.src = images[index];
+    INSTR.innerHTML = instructions[index];
 }
 
 
@@ -77,8 +86,8 @@ function previousImage() {
     } else {
         index = images.length - 1;
     }
-    document.getElementById('imgSrc').src = images[index];
-    document.getElementById('smokeInstructions').innerHTML = instructions[index];
+    IMG.src = images[index];
+    INSTR.innerHTML = instructions[index];
 }
 
 // judėti tarp nuotraukų su rodyklytem
@@ -89,8 +98,8 @@ function browseImagesKeyEvent(e) {
         } else {
             index = 0;
         }
-        document.getElementById('imgSrc').src = images[index];
-        document.getElementById('smokeInstructions').innerHTML = instructions[index];
+        IMG.src = images[index];
+        INSTR.innerHTML = instructions[index];
     }
     if (e.key === "ArrowLeft") {
         if(index > 0) {
@@ -98,78 +107,72 @@ function browseImagesKeyEvent(e) {
         } else {
             index = images.length - 1;
         }
-        document.getElementById('imgSrc').src = images[index];
-        document.getElementById('smokeInstructions').innerHTML = instructions[index];
+        IMG.src = images[index];
+        INSTR.innerHTML = instructions[index];
     }
 }
 
-// share mygtukas
-function shareSmoke(map, loc, id) {
-    let smokeParameters = location.hostname + ":" + location.port + location.pathname + "?map=" + map + "&loc=" + loc + "&id=" + id;
-    window.prompt("Copy to clipboard: Ctrl+C, Enter", smokeParameters);
-}
-
-
-// declare default jeigu nieko nėra
-if (localStorage.getItem('typeActive') ===  null) {
+// default localstorage
+if (localStorage.getItem("typeActive") === null) { 
     localStorage.setItem("typeActive", "smoke");
     localStorage.setItem("typeActiveID", "type1");
 }
-if (localStorage.getItem('tick1') ===  null && localStorage.getItem('tick2') ===  null) {
-    localStorage.setItem("tick1", "true");
-    localStorage.setItem("tick2", "false");
+if (localStorage.getItem("tickActiveID") === null) {
+    localStorage.setItem("tickActiveID", "tick1")
 }
+
+// darom kad ant selected hover nebutu sviesios spalvos
+function noHover() {
+    const css = `
+    #${localStorage.getItem('typeActiveID')}:hover,
+    #${localStorage.getItem('tickActiveID')}:hover { 
+    background-color: #945a04
+    }`;
+    let style = document.createElement('style');
+    style.id = "noHover";
+    style.appendChild(document.createTextNode(css));
+
+    document.getElementsByTagName('head')[0].appendChild(style);
+}
+noHover();
 
 // uždedam tas kas yra active
 document.getElementById(localStorage.getItem("typeActiveID")).classList.add("active");
-if (localStorage.getItem("tick1") === "true") {
-    document.getElementById("tick1").classList.add("active");
-}
-if (localStorage.getItem("tick2") === "true") {
-    document.getElementById("tick2").classList.add("active");
-}
+document.getElementById(localStorage.getItem("tickActiveID")).classList.add("active");
 
 // filtru spalva pakeicia onclick (changeFilter)
 function chFilter(id, type) {
-    const target = document.getElementById(id);
+    const TARGET = document.getElementById(id);
 
     if (id.includes("type")) {
         document.getElementById(localStorage.getItem("typeActiveID")).classList.remove("active");
         localStorage.setItem("typeActiveID", id);
-        if (target.classList.contains("active")) {
-            target.classList.remove("active");
-        } 
-        else {
-            target.classList.add("active");
-            localStorage.setItem("typeActive", type);
-            getIconData();
-        }
+        localStorage.setItem("typeActive", type);
+        TARGET.classList.add("active");
+        getIconData();
     }
 
-    if (id.includes("tick1") && !target.classList.contains("active")) {
-        target.classList.add("active");
-        localStorage.setItem("tick1", "true");
-        localStorage.setItem("tick2", "false");
-        document.getElementById("tick2").classList.remove("active");
+    else if (id.includes("tick")) {
+        document.getElementById(localStorage.getItem("tickActiveID")).classList.remove("active");
+        localStorage.setItem("tickActiveID", id);
+        TARGET.classList.add("active");
     }
-    else if (id.includes("tick2") && !target.classList.contains("active")) {
-        target.classList.add("active");
-        localStorage.setItem("tick2", "true");
-        localStorage.setItem("tick1", "false");
-        document.getElementById("tick1").classList.remove("active");
-    }
+
+    document.getElementById("noHover").remove();
+    noHover();
 }
 
 let checkClose = false;
 let checkOpen = true;
 
+
 // display neveikia su transition ;(
 // galbut veiks su scale arba visibility
 function openMenu() {
     if (checkOpen) {
-        document.getElementById('settingsId').style.display = 'block';
+        SETTINGSID.style.display = 'block';
         document.body.setAttribute("onclick", "closeMenu()");
-        document.getElementById('settingsButton').removeAttribute("onclick", "openMenu()");
+        SETTINGSBUTTON.removeAttribute("onclick", "openMenu()");
         checkOpen = false;
     }
 }
@@ -177,35 +180,34 @@ function openMenu() {
 function closeMenu() {
     if (checkClose) {
         setTimeout(() => {
-            document.getElementById('settingsId').style.display = 'none';
+            SETTINGSID.style.display = 'none';
         }, 0);
         document.body.removeAttribute("onclick");
         checkClose = false;
         checkOpen = true;
     } else {
         checkClose = true;
-        document.getElementById('settingsButton').setAttribute("onclick", "openMenu()");
+        SETTINGSBUTTON.setAttribute("onclick", "openMenu()");
     }
 }
 
 
-
-if (localStorage.getItem('userTheme') ===  null) {
+// default localstorage
+if (localStorage.getItem('userTheme') ===  null && localStorage.getItem('loadVideoFirst') ===  null) 
+{
     localStorage.setItem("userTheme", "false");
-}
-if (localStorage.getItem('loadVideoFirst') ===  null) {
     localStorage.setItem("loadVideoFirst", "false");
 }
 
 if (localStorage.getItem('userTheme') === "false") {
-    document.getElementById('userTheme').innerHTML = "Dark theme: false";
+    USERTHEME.innerHTML = "Dark theme: false";
 } else {
-    document.getElementById('userTheme').innerHTML = "Dark theme: true";
+    USERTHEME.innerHTML = "Dark theme: true";
 }
 if (localStorage.getItem('loadVideoFirst') == "false") {
-    document.getElementById('loadVideoFirst').innerHTML = "Load video first: false";
+    LOADVIDEOFIRST.innerHTML = "Load video first: false";
 } else {
-    document.getElementById('loadVideoFirst').innerHTML = "Load video first: true";
+    LOADVIDEOFIRST.innerHTML = "Load video first: true";
 }
 
 // nustatymu onclick pakeitimai (prastai padariau kol kas)
@@ -215,19 +217,19 @@ function settingChange(setting) {
     if (setting === "userTheme") {
         if (localStorage.getItem('userTheme') === "false") {
             localStorage.setItem("userTheme", "true");
-            document.getElementById('userTheme').innerHTML = "Dark theme: true";
+            USERTHEME.innerHTML = "Dark theme: true";
         } else {
             localStorage.setItem("userTheme", "false");
-            document.getElementById('userTheme').innerHTML = "Dark theme: false";
+            USERTHEME.innerHTML = "Dark theme: false";
         }
     }
     if (setting === "loadVideoFirst") {
         if (localStorage.getItem('loadVideoFirst') == "false") {
             localStorage.setItem("loadVideoFirst", "true");
-            document.getElementById('loadVideoFirst').innerHTML = "Load video first: true";
+            LOADVIDEOFIRST.innerHTML = "Load video first: true";
         } else {
             localStorage.setItem("loadVideoFirst", "false");
-            document.getElementById('loadVideoFirst').innerHTML = "Load video first: false";
+            LOADVIDEOFIRST.innerHTML = "Load video first: false";
         }
     }
 }

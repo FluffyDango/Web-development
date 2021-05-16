@@ -66,10 +66,10 @@ function loadSmokeBoxMap (loc, id) {
 }
 
 function clearPopup() {
-    document.getElementById('JSONinfo').innerHTML = "";
-    document.getElementById('iframe').innerHTML = "";
-    document.getElementById('iframe').src = "";
-    document.getElementById('popupPhoto').innerHTML = "<img id='imgSrc'/>";
+    JSONINFO.innerHTML = "";
+    IFRAME.innerHTML = "";
+    IFRAME.src = "";
+    POPUPPHOTO.innerHTML = "<img id='imgSrc'/>";
     document.removeEventListener("keydown", browseImagesKeyEvent);
-    document.getElementById('popupPhoto').style.boxShadow = "";
+    POPUPPHOTO.style.boxShadow = "";
 }

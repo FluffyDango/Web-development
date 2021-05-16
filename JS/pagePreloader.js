@@ -31,33 +31,36 @@ function updatePage(mapToUpdateTo) {
     if (window.location.pathname != "/html/smokesMapVersion.html") {
         window.location.pathname = "/html/smokesMapVersion.html";
     }
+    
+    const overviews = "../images/overviews/";
+
     switch (mapToUpdateTo) {
         case "mirage":
-            mapMainImg.src = "../images/overviews/mirage_overview.webp";
+            MAPMAINIMG.src = overviews + "mirage_overview.webp";
             break;
         case "inferno":
-            mapMainImg.src = "../images/overviews/inferno_overview.webp";
+            MAPMAINIMG.src = overviews + "inferno_overview.webp";
             break;
         case "overpass":
-            mapMainImg.src = "../images/overviews/overpass_overview.webp";
+            MAPMAINIMG.src = overviews + "overpass_overview.webp";
             break;
         case "dust2":
-            mapMainImg.src = "../images/overviews/dust2_overview.webp";
+            MAPMAINIMG.src = overviews + "dust2_overview.webp";
             break;
         case "cache":
-            mapMainImg.src = "../images/overviews/cache_overview.webp";
+            MAPMAINIMG.src = overviews + "cache_overview.webp";
             break;
         case "train":
-            mapMainImg.src = "../images/overviews/train_overview.webp";
+            MAPMAINIMG.src = overviews + "train_overview.webp";
             break;
         case "nuke":
-            mapMainImg.src = "../images/overviews/nuke_overview.webp";
+            MAPMAINIMG.src = overviews + "nuke_overview.webp";
             break;
         case "vertigo":
-            mapMainImg.src = "../images/overviews/vertigo_overview.webp";
+            MAPMAINIMG.src = overviews + "vertigo_overview.webp";
             break;
         default:
-            mapMainImg.src = "../images/overviews/mirage_overview.webp";
+            MAPMAINIMG.src = overviews + "mirage_overview.webp";
             break;
     }
     getIconData();
