@@ -23,23 +23,23 @@ function loadIcons() {
     let result = "";
 
     if (localStorage.getItem("typeActive") === "smoke") {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-cloud fa-2x smokeIcon' style='color: #d6d6d6; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        for (let i = 0; i < Object.keys(map.top).length; i++) {
+            result += "<div class='fas fa-cloud fa-2x smokeIcon' style='color: #d6d6d6; top: " + map.top[i] + "%" + ";left: " + map.left[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
         }
     }
     else if (localStorage.getItem("typeActive") === "molotov") {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-fire fa-2x smokeIcon' style='color: #e02d0d; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        for (let i = 0; i < Object.keys(map.top).length; i++) {
+            result += "<div class='fas fa-fire fa-2x smokeIcon' style='color: #e02d0d; top: " + map.top[i] + "%" + ";left: " + map.left[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
         }
     }
     else if (localStorage.getItem("typeActive") === "flash") {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-bolt fa-2x smokeIcon' style='color: #eecf20; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        for (let i = 0; i < Object.keys(map.top).length; i++) {
+            result += "<div class='fas fa-bolt fa-2x smokeIcon' style='color: #eecf20; top: " + map.top[i] + "%" + ";left: " + map.left[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
         }
     }
     else {
-        for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-            result += "<div class='fas fa-bomb fa-2x smokeIcon' style='color: #000000; bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+        for (let i = 0; i < Object.keys(map.top).length; i++) {
+            result += "<div class='fas fa-bomb fa-2x smokeIcon' style='color: #000000; top: " + map.top[i] + "%" + ";left: " + map.left[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
         }
     }
 

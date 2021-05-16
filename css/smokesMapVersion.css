@@ -9,6 +9,7 @@
     text-align: center;
     left: 2.5cm;
     color: white;
+    z-index: 1;
 }
 
 /*   atskiri filtrai: type ir tick   */
