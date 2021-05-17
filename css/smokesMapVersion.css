@@ -94,7 +94,7 @@
 /*   Puslapis   */
 .pageBox {
     position: absolute;
-    height: 110%;
+    height: 55em;
     left: 50%;
     transform: translateX(-50%);
 }

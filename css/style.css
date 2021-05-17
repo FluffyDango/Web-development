@@ -107,7 +107,7 @@ h4 {
 .icon:hover p {
     opacity: 1;
     left: 120%;
-    transition: all 0.05s ease 0s;
+    transition: 0.05s;
 }
 
 

@@ -31,8 +31,8 @@ function loadIcons() {
     else 
         typeOfSmoke = "<div class='fas fa-bomb fa-2x smokeIcon' style='color: #000000; ";
 
-    for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-        result += typeOfSmoke + "bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+    for (let i = 0; i < Object.keys(map.top).length; i++) {
+        result += typeOfSmoke + "top: " + map.top[i] + "%" + ";left: " + map.left[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
     }
 
     SMOKEICONHOLDER.innerHTML = result;
