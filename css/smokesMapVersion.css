@@ -30,14 +30,6 @@
     border-bottom-left-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
 }
-#tick1 {
-    border-top-left-radius: 0.6rem;
-    border-top-right-radius: 0.6rem;
-}
-#tick2 {
-    border-bottom-left-radius: 0.6rem;
-    border-bottom-right-radius: 0.6rem;
-}
 
 #tick1 {
     border-top-left-radius: 0.6rem;
@@ -64,11 +56,6 @@
     user-select: none;
 }
 
-/*   mažiukas border   */
-.filters span:not(:last-child) {
-    border-bottom: 2px #222222 solid;
-}
-
 /*   tarpai tarp tick ir type filtrų   */
 .filterType {
     font-family: 'Montserrat';
@@ -86,7 +73,6 @@
 }
 
 .active {
-    /* background-color: #a76604; */
     background-color: #945a04;
 }
 
