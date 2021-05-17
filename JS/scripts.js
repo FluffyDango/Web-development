@@ -2,6 +2,9 @@
 
 let index = 0;
 
+let images;
+let instructions;
+
 const NEXT = document.getElementById('nextImg');
 const PREV = document.getElementById('prevImg');
 const IMG = document.getElementById('imgSrc');

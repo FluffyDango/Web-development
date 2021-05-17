@@ -33,34 +33,35 @@ function updatePage(mapToUpdateTo) {
     }
     
     const overviews = "../images/overviews/";
+    MAPMAINIMG.src = overviews
 
     switch (mapToUpdateTo) {
         case "mirage":
-            MAPMAINIMG.src = overviews + "mirage_overview.webp";
+            MAPMAINIMG.src += "mirage_overview.webp";
             break;
         case "inferno":
-            MAPMAINIMG.src = overviews + "inferno_overview.webp";
+            MAPMAINIMG.src += "inferno_overview.webp";
             break;
         case "overpass":
-            MAPMAINIMG.src = overviews + "overpass_overview.webp";
+            MAPMAINIMG.src += "overpass_overview.webp";
             break;
         case "dust2":
-            MAPMAINIMG.src = overviews + "dust2_overview.webp";
+            MAPMAINIMG.src += "dust2_overview.webp";
             break;
         case "cache":
-            MAPMAINIMG.src = overviews + "cache_overview.webp";
+            MAPMAINIMG.src += "cache_overview.webp";
             break;
         case "train":
-            MAPMAINIMG.src = overviews + "train_overview.webp";
+            MAPMAINIMG.src += "train_overview.webp";
             break;
         case "nuke":
-            MAPMAINIMG.src = overviews + "nuke_overview.webp";
+            MAPMAINIMG.src += "nuke_overview.webp";
             break;
         case "vertigo":
-            MAPMAINIMG.src = overviews + "vertigo_overview.webp";
+            MAPMAINIMG.src += "vertigo_overview.webp";
             break;
         default:
-            MAPMAINIMG.src = overviews + "mirage_overview.webp";
+            MAPMAINIMG.src += "mirage_overview.webp";
             break;
     }
     getIconData();

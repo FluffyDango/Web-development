@@ -1,8 +1,5 @@
 "use strict";
 
-let images;
-let instructions;
-
 function getDataImg(loc, id) {
     fetch("../JSON/smokeInfo.json")
         .then((resp) => {
