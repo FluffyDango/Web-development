@@ -14,6 +14,8 @@ function getIconData() {
                 map = data.mirage[localStorage.getItem("typeActive")];
             else if (localStorage.getItem('currentMap') === "inferno")
                 map = data.inferno[localStorage.getItem("typeActive")];
+            else if (localStorage.getItem('currentMap') === "overpass")
+            map = data.overpass[localStorage.getItem("typeActive")];
             loadIcons();
         });
 }
