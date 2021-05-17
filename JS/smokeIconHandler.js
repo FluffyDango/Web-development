@@ -14,7 +14,7 @@ function getIconData() {
             else if (localStorage.getItem('currentMap') === "inferno")
                 map = data.inferno[localStorage.getItem("typeActive")];
             else if (localStorage.getItem('currentMap') === "overpass")
-            map = data.overpass[localStorage.getItem("typeActive")];
+                map = data.overpass[localStorage.getItem("typeActive")];
             loadIcons();
         });
 }
@@ -33,8 +33,8 @@ function loadIcons() {
     else 
         typeOfSmoke = "<div class='fas fa-bomb fa-2x smokeIcon' style='color: #000000; ";
 
-    for (let i = 0; i < Object.keys(map.bottom).length; i++) {
-        result += typeOfSmoke + "bottom: " + map.bottom[i] + "%" + ";right: " + map.right[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
+    for (let i = 0; i < Object.keys(map.top).length; i++) {
+        result += typeOfSmoke + "top: " + map.top[i] + "%" + ";left: " + map.left[i] + "%" + ";' onclick='showPopup(); getData(&quot;" + i + "&quot;)'></div>";
     }
 
     SMOKEICONHOLDER.innerHTML = result;
