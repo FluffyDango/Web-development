@@ -1756,5 +1756,31 @@
                 }
             }
         ]
+    },
+
+    "dust2": {
+        "smoke": [
+            {   
+                "title": "Plat",
+                "1": {
+                    "from": "tracks",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }
+        ]
     }
 }
