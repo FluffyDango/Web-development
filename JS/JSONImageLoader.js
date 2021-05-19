@@ -18,12 +18,12 @@ function getDataImg(loc, id) {
 
             document.getElementById('smokeTitle').innerHTML = map[loc].title + " " + localStorage.getItem('typeActive');
             document.getElementById('imgSrc').src = images[0];
-            document.getElementById('imgBackIcon').style.visibility = "visible";
-            document.getElementById('photoVideoBtn').style.visibility = "visible";
-            document.getElementById('photoVideoBtn').setAttribute("onclick", "playVideo(" + loc + "," + id + ")");
+            IMGBACKICON.style.visibility = "visible";
+            PHOTOVIDEOBTN.style.visibility = "visible";
+            PHOTOVIDEOBTN.setAttribute("onclick", "playVideo(" + loc + "," + id + ")");
             document.getElementById('smokeShare').setAttribute("onclick", "shareSmoke(" + "'" + localStorage.getItem('currentMap') + "'" + "," + loc + "," + id + ")");
-            smokeShareBtn.style.visibility = "visible";
-            document.getElementById('imgBackIcon').setAttribute("onclick", "backPage(" + loc + ");");
+            SMOKESHAREBTN.style.visibility = "visible";
+            IMGBACKICON.setAttribute("onclick", "backPage(" + loc + ");");
 
             // įdeda rodyklytes
             document.getElementById('popupPhoto').innerHTML += "<a class='fas fa-caret-left imgPrev' id='nextImg' onclick='previousImage()'></a><a class='fas fa-caret-right imgNext' id='prevImg' onclick='nextImage()'></a><div class='smokeDescription'><p class='smokeInstructions' id='smokeInstructions'><p></div>";

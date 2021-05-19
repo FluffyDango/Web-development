@@ -21,6 +21,7 @@ const JSONINFO = document.getElementById('JSONinfo');
 const IFRAME = document.getElementById('iframe');
 const SMOKEICONHOLDER = document.getElementById('smokeIconHolder');
 const SMOKESHARE = document.getElementById('smokeShare');
+const SMOKESHAREBTN = document.getElementById('smokeShareBtn');
 
 
 const SETTINGSID = document.getElementById('settingsId');
@@ -50,6 +51,7 @@ function hidePopup() {
     document.getElementById('popup').style.transform = "scale(0)";
     MAINPOPUP.style.visibility = "hidden";
     PHOTOVIDEOBTN.style.visibility = "hidden";
+    SMOKESHAREBTN.style.visibility = "hidden";
     IMGBACKICON.style.visibility = "hidden";
     MAINPOPUP.style.opacity = "0";
     quitVideo();
@@ -65,11 +67,16 @@ function backPage(loc) {
     clearPopup();
     getData(loc);
     quitVideo();
+    SMOKESHAREBTN.style.visibility = "hidden";
     PHOTOVIDEOBTN.style.visibility = "hidden";
     IMGBACKICON.style.visibility = "hidden";
 }
 
-
+// share mygtukas
+function shareSmoke(map, loc, id) {
+    let smokeParameters = location.hostname + ":" + location.port + location.pathname + "?map=" + map + "&loc=" + loc + "&id=" + id;
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", smokeParameters);
+}
 
 // Nuotrauku galerijos next ir previous mygtukai
 function nextImage() {
@@ -78,8 +85,8 @@ function nextImage() {
     } else {
         index = 0;
     }
-    IMG.src = images[index];
-    INSTR.innerHTML = instructions[index];
+    document.getElementById('imgSrc').src = images[index];
+    document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }
 
 
@@ -89,8 +96,8 @@ function previousImage() {
     } else {
         index = images.length - 1;
     }
-    IMG.src = images[index];
-    INSTR.innerHTML = instructions[index];
+    document.getElementById('imgSrc').src = images[index];
+    document.getElementById('smokeInstructions').innerHTML = instructions[index];
 }
 
 // judėti tarp nuotraukų su rodyklytem
@@ -101,8 +108,8 @@ function browseImagesKeyEvent(e) {
         } else {
             index = 0;
         }
-        IMG.src = images[index];
-        INSTR.innerHTML = instructions[index];
+        document.getElementById('imgSrc').src = images[index];
+        document.getElementById('smokeInstructions').innerHTML = instructions[index];
     }
     if (e.key === "ArrowLeft") {
         if(index > 0) {
@@ -110,8 +117,8 @@ function browseImagesKeyEvent(e) {
         } else {
             index = images.length - 1;
         }
-        IMG.src = images[index];
-        INSTR.innerHTML = instructions[index];
+        document.getElementById('imgSrc').src = images[index];
+        document.getElementById('smokeInstructions').innerHTML = instructions[index];
     }
 }
 
