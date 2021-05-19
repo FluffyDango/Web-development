@@ -39,7 +39,7 @@ p {
 /*   supažindinimas su puslapiu pozicija ir spalva  */
 .introduction {
     display: inline-block;
-    background-image: linear-gradient(to right, #b4b4b4, #d8d4d4);
+    background-image: linear-gradient(to right, #dbb57a, #d8d4d4);
     padding: 1em;
     text-align: left;
 }
@@ -76,7 +76,7 @@ p {
 /*   išsidėstimo block'ai   */
 .layout li {
     display: inline-block;
-    background-color: #a5a5a5;
+    background-color: #dbb57a;
     height: 20em;
 }
 
@@ -115,14 +115,16 @@ p {
 
 .quickNavigation div {
     padding: 0.6em 0em;
-    background-color: #b4b4b4;
+    background-color: #DE9B35;
     transition: all 0.3s ease 0s;
     border-radius: 0.5em;
     width: 90%;
     justify-self: center;
+    cursor: pointer;
+    user-select: none;
 }
 .quickNavigation div:hover {
-    background-color:#919191;
+    background-color:#b37c2b;
 }
 
 /*   sujungia cfgCopy ir copySnippet. Reikėjo, kad copySnippet būtų dešinėje pusėje, tiesiai po cfgCopy   */
@@ -137,7 +139,8 @@ p {
     margin: 10px 0px;
     padding: 1%;
     box-shadow: 1px 1px 5px 1px black;
-    background-color: #959ab9;
+    /* background-color: #959ab9; */
+    background-color: #dbb57a;
 }
 
 .cfgCopy p {
@@ -151,13 +154,14 @@ p {
     width: 20%;
     padding: 1% 2%;
     margin-top: 0.5%;
-    background-color: #5695bd;
+    background-color: #DE9B35;
     border: 2px solid rgb(95, 95, 95);
     transition: all 0.3s ease 0s;
+    user-select: none;
 }
 
 .copySnippet:hover {
-    background-color: #457491;
+    background-color: #b37c2b;
 }
 
 .commands {

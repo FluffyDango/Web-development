@@ -262,6 +262,8 @@ function copyToClipboard(id) {
     }
     
     navigator.clipboard.writeText(text).then(() => {
-        console.log('Async: Copying to clipboard was successful!');
+        alert('Copying to clipboard was successful!');
+    }, () => {
+        alert('Error');
     })
 }
