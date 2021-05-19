@@ -275,7 +275,7 @@
                 }
             },
             {
-                "title": "Catwalk closer to mid",
+                "title": "Catwalk closer to middle",
                 "1": {
                     "from": "Top-mid",
                     "tickrate": "128 64",
@@ -657,7 +657,7 @@
                 }
             },
             {   
-                "title": "Mid",
+                "title": "Middle",
                 "1": {
                     "from": "jungle",
                     "tickrate": "128 64",
@@ -812,7 +812,7 @@
                 }
             },
             {   
-                "title": "Ramp lower mid",
+                "title": "Ramp lower middle",
                 "1": {
                     "from": "",
                     "tickrate": "128 64",
@@ -1088,7 +1088,699 @@
 
 
         "molotov": [
+            {   
+                "title": "Dark",
+                "1": {
+                    "from": "car",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Newbox",
+                "1": {
+                    "from": "car",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "2nd boost",
+                "1": {
+                    "from": "car",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Banana wall-car",
+                "1": {
+                    "from": "1st boost",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "NIP",
+                "1": {
+                    "from": "long",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Pit",
+                "1": {
+                    "from": "apps",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }
+        ],
 
+        "flash": [
+            {   
+                "title": "B site",
+                "1": {
+                    "from": "banana",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "A site",
+                "1": {
+                    "from": "apps",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "A site",
+                "1": {
+                    "from": "Top-mid short",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }
+        ]
+    },
+
+
+
+    "overpass": {
+        "smoke": [
+            {   
+                "title": "Heaven",
+                "1": {
+                    "from": "alley",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Barrels and pit",
+                "1": {
+                    "from": "tracks",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "B site middle",
+                "1": {
+                    "from": "",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Bridge",
+                "1": {
+                    "from": "water",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }, 
+            {   
+                "title": "Water tunnel",
+                "1": {
+                    "from": "",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Monster",
+                "1": {
+                    "from": "CT-spawn",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Lower connector One-way",
+                "1": {
+                    "from": "alley",
+                    "tickrate": "128",
+                    "oneway": true,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Upper connector",
+                "1": {
+                    "from": "fountain",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Toilet middle",
+                "1": {
+                    "from": "T stairs",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Banana",
+                "1": {
+                    "from": "T stairs",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Truck",
+                "1": {
+                    "from": "banana",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "A site middle",
+                "1": {
+                    "from": "banana",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Bins",
+                "1": {
+                    "from": "banana",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Bank",
+                "1": {
+                    "from": "",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Van",
+                "1": {
+                    "from": "alley",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }
+        ],
+
+        "molotov": [
+            {   
+                "title": "Barrels",
+                "1": {
+                    "from": "",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Pit",
+                "1": {
+                    "from": "water",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Water tunnel",
+                "1": {
+                    "from": "abc",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Short",
+                "1": {
+                    "from": "alley",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "Truck",
+                "1": {
+                    "from": "banana",
+                    "tickrate": "128",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
+            {   
+                "title": "A site default",
+                "1": {
+                    "from": "bins",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }
+        ],
+
+        "HE": [
+            {   
+                "title": "Boost",
+                "1": {
+                    "from": "tracks",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }
+        ]
+    },
+
+    "dust2": {
+        "smoke": [
+            {   
+                "title": "Plat",
+                "1": {
+                    "from": "tracks",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            }
         ]
     }
 }

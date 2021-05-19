@@ -3,16 +3,42 @@
 let map;
 
 function getIconData() {
+    let typeActive = localStorage.getItem("typeActive");
     fetch("../JSON/smokeIcons.json")
         .then((resp) => {
             return resp.json();
         })
         .then((data) => {
             // object galima įeiti ne tik su .type bet ir [type]
-            if (localStorage.getItem('currentMap') === "mirage")
-                map = data.mirage[localStorage.getItem("typeActive")];
-            else if (localStorage.getItem('currentMap') === "inferno")
-                map = data.inferno[localStorage.getItem("typeActive")];
+            switch (localStorage.getItem('currentMap')) {
+                case "mirage":
+                    map = data.mirage[typeActive];
+                    break;
+                case "inferno":
+                    map = data.inferno[typeActive];
+                    break;
+                case "overpass":
+                    map = data.overpass[typeActive];
+                    break;
+                case "dust2":
+                    map = data.dust2[typeActive];
+                    break;
+                case "cache":
+                    map = data.cache[typeActive];
+                    break;
+                case "train":
+                    map = data.train[typeActive];
+                    break;
+                case "nuke":
+                    map = data.nuke[typeActive];
+                    break;
+                case "vertigo":
+                    map = data.vertigo[typeActive];
+                    break;
+                default:
+                    map = data.mirage[typeActive];
+                    break;
+            }
             loadIcons();
         });
 }

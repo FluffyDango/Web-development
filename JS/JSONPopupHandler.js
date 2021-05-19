@@ -13,6 +13,8 @@ function getData(loc) {
                 map = JSONdata.mirage[localStorage.getItem('typeActive')];
             else if (localStorage.getItem('currentMap') === "inferno")
                 map = JSONdata.inferno[localStorage.getItem('typeActive')];
+            else if (localStorage.getItem('currentMap') === "overpass")
+                map = JSONdata.overpass[localStorage.getItem('typeActive')];
             smokeLoad(loc)
         });
 }
