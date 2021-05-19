@@ -3,7 +3,7 @@
 function preloadPage() {
     const params = new URLSearchParams(window.location.search);
     
-    var arr = location.href.split('?');
+    let arr = location.href.split('?');
     if (arr.length > 1) {
         let mapParam = params.get('map');
         let locParam = params.get('loc');

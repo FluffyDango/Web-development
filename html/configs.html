@@ -65,13 +65,13 @@
             </ul>
             <h3>Your launcher cfg file may look something like this</h3>
             <div class="bendras">
-                <div class="cfgCopy">
+                <div id="configCommands" class="cfgCopy">
                     <p>alias "+jumpthrow" "+jump;-attack"; alias "-jumpthrow" "-jump"; bind x "+jumpthrow";</p>
                     <p>fps_max 120</p>
                     <p>bind v "r_cleardecals"</p>
                     <p>cl_use_opens_buy_menu 0</p>
                 </div>
-                <div class="copySnippet">
+                <div class="copySnippet" onclick="copyToClipboard('configCommands')">
                     Copy to clipboard
                 </div>
             </div>
@@ -107,10 +107,10 @@
             
             <h3>Your launch options may look something like this</h3>
             <div class="bendras">
-                <div class="cfgCopy">
+                <div id="launchOptions" class="cfgCopy">
                     <p>-nojoy -novid +exec starting.cfg</p>
                 </div>
-                <div class="copySnippet">
+                <div class="copySnippet" onclick="copyToClipboard('launchOptions')">
                     Copy to clipboard
                 </div>
             </div>
@@ -121,7 +121,7 @@
             <li class="highlight"> Grenade practice</li>
             <div class="bendras">
                 <div class="cfgCopy">
-                    <ul class="commands" style="list-style: none; padding: 0;">
+                    <ul id="nadePractice" class="commands">
                         <li>// Game commands</li>
                         <li>sv_cheats 1</li>
                         <li>mp_limitteams 0</li>
@@ -139,28 +139,30 @@
                         <p>Can't hurt your teamates.</p>
                         <li>ammo_grenade_limit_total 5</li>
                         <li>bot_kick</li>
-                        <li>mp_warmup_end</li><br>
+                        <li>mp_warmup_end</li>
+                        <br>
                         
                         <li>// Trajectories</li>
                         <li>sv_grenade_trajectory 1</li>
                         <li>sv_grenade_trajectory_time 10</li>
                         <li>sv_showimpacts 1</li>
-                        <li>sv_showimpacts_time 10</li><br>
+                        <li>sv_showimpacts_time 10</li>
+                        <br>
                         
                         <li>// Player commands</li>
                         <li>sv_infinite_ammo 1</li>
                         <p>You don't need to reload when shooting. (2) makes it unlimited ammo but you still need to reload.</p>
                         <li>sv_alltalk 1</li>
-                        <p>Enables voice chat with enemy team.</p><br>
-
+                        <p>Enables voice chat with enemy team.</p>
+                        <br>
                         <li>// Binds</li>
                         <li>bind alt noclip</li>
-                        <p>Makes you able to fly through walls.</p><br>
-
+                        <p>Makes you able to fly through walls.</p>
+                        <br>
                         <li>mp_restartgame 1</li>
                     </ul>
                 </div>
-                <div class="copySnippet">
+                <div class="copySnippet" onclick="copyToClipboard('nadePractice')">
                     Copy to clipboard
                 </div>
             </div>
@@ -169,7 +171,7 @@
             <li class="highlight"> 1 vs 1</li>
             <div class="bendras">
                 <div class="cfgCopy">
-                    <ul class="commands" style="list-style: none; padding: 0;">
+                    <ul id="OneVsOne" class="commands">
                         <li>// Game commands</li>
                         <li>exec gamemode_competitive</li>
                         <li>bot_kick</li>
@@ -194,22 +196,22 @@
                         <li>mp_weapons_allow_map_placed 0</li>
                         <p>Removes the weapons on the ground from the previous rounds.</p>
                         <li>mp_halftime 1</li>
-                        <p>Switch sides after half time.</p><br>
-
+                        <p>Switch sides after half time.</p>
+                        <br>
                         <li>// Player commands</li>
                         <li>sv_infite_ammo 2</li>
                         <p>Infinite ammo but you still need to reload. (1) makes it no reload.</p>
                         <li>sv_alltalk 1</li>
-                        <p>Enables voice chat with enemy team.</p><br>
-
+                        <p>Enables voice chat with enemy team.</p>
+                        <br>
                         <li>// Game restart</li>
                         <li>mp_warmup_end</li>
-                        <li>mp_restartgame 1</li><br>
-
-                        <li>say "> 1v1 AIM Config loaded <"</li>
+                        <li>mp_restartgame 1</li>
+                        <br>
+                        <li>say "1v1 AIM Config loaded"</li>
                     </ul>
                 </div>
-                <div class="copySnippet">
+                <div class="copySnippet" onclick="copyToClipboard('OneVsOne')">
                     Copy to clipboard
                 </div>
             </div>
@@ -231,5 +233,6 @@
         </ul>
     </main>
     <script src="../JS/pagePreloader.js"></script>
+    <script src="../JS/scripts.js"></script>
 </body>
 </html>

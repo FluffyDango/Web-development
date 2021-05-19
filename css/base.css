@@ -2,7 +2,8 @@
 /*   background   */
 body {
     background-image: url(../images/textures/45-degree-fabric-light.png);
-    background-color: #2D3047;
+    /* background-color: #2D3047; */
+    background-color: #252525;
 }
 
 main {
@@ -75,7 +76,7 @@ p {
 /*   išsidėstimo block'ai   */
 .layout li {
     display: inline-block;
-    background-color: #959ab9;
+    background-color: #a5a5a5;
     height: 20em;
 }
 
@@ -159,6 +160,11 @@ p {
     background-color: #457491;
 }
 
+.commands {
+    list-style: none;
+    padding: 0;
+}
+
 /*   Komandų komentarai, įdedamas į ul arba ol   */
 .commands p {
     margin-top: 0.4em;
@@ -200,6 +206,7 @@ p {
 
 .maxFPS {
     font-size: 1.4em;
+    list-style: none;
 }
 
 .maxFPS p {
