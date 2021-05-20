@@ -119,12 +119,22 @@ h4 {
 /*   Visas page top display   */
 .pageTop {
     display: flex;
-    width: 90%;
-    justify-content: space-between;
+    width: 100vw;
+    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
-    padding: 0.5% 5%;
+    padding: 0.5% 0;
     background-color: #F0EDE9FA;
 }
+
+.topItems {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.topItems:nth-child(2) > span { margin: 0 auto 0 18%; }
+.topItems:nth-child(4) > span { margin: 0 16% 0 auto; }
 
 /*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
 .topWords {
@@ -142,16 +152,17 @@ h4 {
 /*   pageTop vidurys  */
 .navLinks {
     display: flex;
+    flex-grow: 4;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 2vh 16vw;
+    padding-inline-start: 0;
     justify-content: center;
 }
 
 /*   pageTop vidurio tekstas (list items)   */
 .navLinks li {
     display: inline-block;
-    padding: 0 2vw;
+    padding: 0 1.6em;
     list-style: none;
 }
 
@@ -166,9 +177,17 @@ h4 {
     color: rgba(253, 219, 58, 0.8);
 }
 
+.topItems:nth-child(2) {
+    flex-grow: 1;
+}
+
+.topItems:nth-child(4) {
+    flex-grow: 1.5;
+}
+
 /*   home mygtuko stilius   */
 #homeBtn {
-    padding: 0.5% 1.5%;
+    padding: 0.3em 0.9em;
     background-color: #DE9B35;
     color: #1a1c20;
     border: none;
@@ -183,19 +202,20 @@ h4 {
     transition: 0.3s;
 }
 
-
 /*   settings mygtukas   */
 #settingsButton {
     border-radius: 1em;
+    margin-left: 1em;
     cursor: pointer;
 }
+
 
 /*   DISPLAY NELEIDZIA TRANSITION   */
 .settings {
     display: none;
     position: absolute;
     right: 0;
-    top: 10%;
+    top: 12%;
     right: 5%;
     z-index: 3;
     background-color: #e4e2e0fa;
