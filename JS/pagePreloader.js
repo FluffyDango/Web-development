@@ -1,5 +1,27 @@
 "use strict";
 
+let JSONdata;
+let ICONdata;
+
+fetch("../JSON/smokeInfo.json")
+        .then((resp) => {
+            return resp.json();
+        })
+        .then((data) => {
+            JSONdata = data;
+        });
+
+fetch("../JSON/smokeIcons.json")
+        .then((resp) => {
+            return resp.json();
+        })
+        .then((data) => {
+            ICONdata = data;
+        })
+        .then(() => {
+            preloadPage();
+        });
+
 function preloadPage() {
     const params = new URLSearchParams(window.location.search);
     
@@ -25,44 +47,11 @@ function preloadPage() {
     updatePage(localStorage.getItem('currentMap'));
 }
 
+
 function updatePage(mapToUpdateTo) {
     localStorage.setItem('currentMap', mapToUpdateTo);
     
-    if (window.location.pathname != "/html/smokesMapVersion.html") {
-        window.location.pathname = "/html/smokesMapVersion.html";
-    }
-    
-    const overviews = "../images/overviews/";
-    MAPMAINIMG.src = overviews
+    MAPMAINIMG.src = "../images/overviews/" + localStorage.getItem('currentMap') + "_overview.webp";
 
-    switch (mapToUpdateTo) {
-        case "mirage":
-            MAPMAINIMG.src += "mirage_overview.webp";
-            break;
-        case "inferno":
-            MAPMAINIMG.src += "inferno_overview.webp";
-            break;
-        case "overpass":
-            MAPMAINIMG.src += "overpass_overview.webp";
-            break;
-        case "dust2":
-            MAPMAINIMG.src += "dust2_overview.webp";
-            break;
-        case "cache":
-            MAPMAINIMG.src += "cache_overview.webp";
-            break;
-        case "train":
-            MAPMAINIMG.src += "train_overview.webp";
-            break;
-        case "nuke":
-            MAPMAINIMG.src += "nuke_overview.webp";
-            break;
-        case "vertigo":
-            MAPMAINIMG.src += "vertigo_overview.webp";
-            break;
-        default:
-            MAPMAINIMG.src += "mirage_overview.webp";
-            break;
-    }
     getIconData();
 }

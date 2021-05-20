@@ -15,8 +15,8 @@
 
     <nav class="quickNavigation">
         <p>Quick Navigation</p>
-        <div>Practice</div>
-        <div>1 vs 1</div>
+        <div onclick="document.getElementById('goTo1').scrollIntoView();">Practice</div>
+        <div onclick="document.getElementById('goTo2').scrollIntoView();">1 vs 1</div>
     </nav>
 
     <!--  Šono navigacija i skirtingus map'us  -->
@@ -118,7 +118,7 @@
 
         <h2>Command sets</h2>
         <ol>
-            <li class="highlight"> Grenade practice</li>
+            <li id="goTo1" class="highlight"> Grenade practice</li>
             <div class="bendras">
                 <div class="cfgCopy">
                     <ul id="nadePractice" class="commands">
@@ -168,7 +168,7 @@
             </div>
 
 
-            <li class="highlight"> 1 vs 1</li>
+            <li id="goTo2" class="highlight"> 1 vs 1</li>
             <div class="bendras">
                 <div class="cfgCopy">
                     <ul id="OneVsOne" class="commands">
@@ -232,7 +232,6 @@
             <p>Creates a warmup with 60 seconds</p>
         </ul>
     </main>
-    <script src="../JS/pagePreloader.js"></script>
-    <script src="../JS/scripts.js"></script>
+    <script src="../JS/changePath.js"></script>
 </body>
 </html>

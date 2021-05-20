@@ -1,40 +1,21 @@
 "use strict";
 
-let JSONdata;
-
-function getData(loc) {
-    fetch("../JSON/smokeInfo.json")
-        .then((resp) => {
-            return resp.json();
-        })
-        .then((data) => {
-            JSONdata = data;
-            if (localStorage.getItem('currentMap') === "mirage")
-                map = JSONdata.mirage[localStorage.getItem('typeActive')];
-            else if (localStorage.getItem('currentMap') === "inferno")
-                map = JSONdata.inferno[localStorage.getItem('typeActive')];
-            else if (localStorage.getItem('currentMap') === "overpass")
-                map = JSONdata.overpass[localStorage.getItem('typeActive')];
-            smokeLoad(loc)
-        });
-}
-
 let result;
 
-function smokeLoad(loc) {
+function getData(loc) {
     result = "";
 
     if (typeof map[loc] === "undefined") {
-        document.getElementById('smokeTitle').innerHTML = "undefined";
+        SMOKETITLE.innerHTML = "undefined";
     } 
     else {
-        document.getElementById('smokeTitle').innerHTML = map[loc].title + " " + localStorage.getItem('typeActive');
+        SMOKETITLE.innerHTML = map[loc].title + " " + localStorage.getItem('typeActive');
     
         for (let id = 1; id < Object.keys(map[loc]).length; id++) {
-            if (localStorage.getItem('tick1') === "true" && map[loc][id].tickrate.includes("64")) {
+            if (localStorage.getItem('tickActiveID') === "tick1" && map[loc][id].tickrate.includes("64")) {
                 loadSmokeBoxMap(loc, id);
             }
-            else  if (localStorage.getItem('tick2') === "true" && map[loc][id].tickrate.includes("128")) {
+            else if (localStorage.getItem('tickActiveID') === "tick2" && map[loc][id].tickrate.includes("128")) {
                 loadSmokeBoxMap(loc, id);
             }
             else if (map[loc][id].tickrate.includes("128 64")) {
@@ -64,7 +45,18 @@ function loadSmokeBoxMap (loc, id) {
     }
 
     // nuotrauka ir views
-    result += "</h3><i class='fas fa-cloud fa-10x'></i><img src='" + map[loc][id].img[0] + "'></img><h3 id='views'>views</h3></div>";
+    result += "</h3><i class='";
+    if (localStorage.getItem("typeActive") === "smoke") {
+        result += "fas fa-cloud fa-10x"
+    } else if (localStorage.getItem("typeActive") === "molotov") {
+        result += "fas fa-fire fa-10x"
+    } else if (localStorage.getItem("typeActive") === "flash") {
+        result += "fas fa-bolt fa-10x"
+    } else {
+        result += "fas fa-bomb fa-10x"
+    }
+
+    result += "'></i><img src='" + map[loc][id].img[0] + "'></img><h3 id='views'>tickrate " + map[loc][id].tickrate + "</h3></div>";
 }
 
 function clearPopup() {

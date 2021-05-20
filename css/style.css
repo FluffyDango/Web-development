@@ -80,12 +80,14 @@ h4 {
     border-top-right-radius: 0.6em;
     border-bottom-right-radius: 0.6em;
     z-index: 1;
+    user-select: none;
 }
 
 /*   Map'u nuotraukos   */
 .mapIconList img {
     width: 100%;
     margin-top: 5%;
+    -webkit-user-drag: none;
 }
 
 .icon {

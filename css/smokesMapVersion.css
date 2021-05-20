@@ -121,7 +121,8 @@
     font-weight: 700;
     font-size: 0.8em;
     position: relative;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
+    right: 50%;
     color: black;
     z-index: 1;
 }
@@ -166,14 +167,29 @@
     color: #aa9227;
 }
 
-.smokeBoxMap [class^="fas fa-cloud fa-10x"] {
+.smokeBoxMap [class^="fas fa-cloud fa-10x"],
+.smokeBoxMap [class^="fas fa-fire fa-10x"],
+.smokeBoxMap [class^="fas fa-bolt fa-10x"],
+.smokeBoxMap [class^="fas fa-bomb fa-10x"] {
     position: absolute;
     top: 8.5%;
     left: 0;
     right: 0;
+    font-size: 12vw;
+    opacity: 0.5;
+}
+
+.smokeBoxMap [class^="fas fa-cloud fa-10x"] {
     color: #5e5e5e;
-    font-size: 11rem;
-    opacity: 0.4;
+}
+.smokeBoxMap [class^="fas fa-fire fa-10x"] {
+    color: #ff2600;
+}
+.smokeBoxMap [class^="fas fa-bolt fa-10x"] {
+    color: #ffd900;
+}
+.smokeBoxMap [class^="fas fa-bomb fa-10x"] {
+    color: #081600;
 }
 
 .smokeBoxMap img {
