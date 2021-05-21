@@ -48,8 +48,11 @@ function preloadPage() {
 }
 
 
-function updatePage(mapToUpdateTo) {
+function updatePage(mapToUpdateTo, shouldClose = 0) {
     localStorage.setItem('currentMap', mapToUpdateTo);
+
+    if (shouldClose)
+        closeMapMenu();
     
     MAPMAINIMG.src = "../images/overviews/" + localStorage.getItem('currentMap') + "_overview.webp";
 
