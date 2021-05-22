@@ -96,6 +96,7 @@ p {
     margin: 5px 10px;
     font-weight: 800;
     font-size: 1.2em;
+    word-wrap: break-word;
 }
 
 /*   Šone greitoji navigacija   */
@@ -160,7 +161,6 @@ p {
     cursor: pointer;
     text-align: center;
     align-self: flex-end;
-    width: 20%;
     padding: 1% 2%;
     margin-top: 0.5%;
     background-color: #DE9B35;
@@ -236,3 +236,11 @@ p {
 
 
 /*   SETTINGS PABAIGA   */
+
+
+@media (max-width: 850px) {
+    .quickNavigation { display: none; }
+    .layout {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

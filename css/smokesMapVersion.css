@@ -94,7 +94,7 @@
 /*   Puslapis   */
 .pageBox {
     position: absolute;
-    height: 55em;
+    height: 50vw;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -216,4 +216,9 @@
     box-shadow: black 1px 1px 20px 1px;
     width: 73.2%;
     height: 84%;
+}
+
+@media (max-width: 850px) {
+    .pageBox { height: 45em; }
+    .smokeIcon { font-size: 1.5em; }
 }

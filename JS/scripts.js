@@ -23,13 +23,6 @@ const SMOKEICONHOLDER = document.getElementById('smokeIconHolder');
 const SMOKESHARE = document.getElementById('smokeShare');
 const SMOKESHAREBTN = document.getElementById('smokeShareBtn');
 
-
-const SETTINGSID = document.getElementById('settingsId');
-const SETTINGSBUTTON = document.getElementById('settingsButton');
-
-const USERTHEME = document.getElementById('userTheme');
-const LOADVIDEOFIRST = document.getElementById('loadVideoFirst');
-
 function escapePopup(event) {
     if (event.key === 'Escape') {
         hidePopup('mainPopup');
@@ -173,76 +166,4 @@ function chFilter(id, type) {
 
     document.getElementById("noHover").remove();
     noHover();
-}
-
-let checkClose = false;
-let checkOpen = true;
-
-
-// display neveikia su transition ;(
-// galbut veiks su scale arba visibility
-function openMenu() {
-    if (checkOpen) {
-        SETTINGSID.style.display = 'block';
-        document.body.setAttribute("onclick", "closeMenu()");
-        SETTINGSBUTTON.removeAttribute("onclick", "openMenu()");
-        checkOpen = false;
-    }
-}
-
-function closeMenu() {
-    if (checkClose) {
-        setTimeout(() => {
-            SETTINGSID.style.display = 'none';
-        }, 0);
-        document.body.removeAttribute("onclick");
-        checkClose = false;
-        checkOpen = true;
-    } else {
-        checkClose = true;
-        SETTINGSBUTTON.setAttribute("onclick", "openMenu()");
-    }
-}
-
-
-// default localstorage
-if (localStorage.getItem('userTheme') ===  null && localStorage.getItem('loadVideoFirst') ===  null) 
-{
-    localStorage.setItem("userTheme", "false");
-    localStorage.setItem("loadVideoFirst", "false");
-}
-
-if (localStorage.getItem('userTheme') === "false") {
-    USERTHEME.innerHTML = "Dark theme: false";
-} else {
-    USERTHEME.innerHTML = "Dark theme: true";
-}
-if (localStorage.getItem('loadVideoFirst') == "false") {
-    LOADVIDEOFIRST.innerHTML = "Load video first: false";
-} else {
-    LOADVIDEOFIRST.innerHTML = "Load video first: true";
-}
-
-// nustatymu onclick pakeitimai (prastai padariau kol kas)
-function settingChange(setting) {
-    // closeMenu kitaip suveiks ir uždarys settings
-    checkClose = false;
-    if (setting === "userTheme") {
-        if (localStorage.getItem('userTheme') === "false") {
-            localStorage.setItem("userTheme", "true");
-            USERTHEME.innerHTML = "Dark theme: true";
-        } else {
-            localStorage.setItem("userTheme", "false");
-            USERTHEME.innerHTML = "Dark theme: false";
-        }
-    }
-    if (setting === "loadVideoFirst") {
-        if (localStorage.getItem('loadVideoFirst') == "false") {
-            localStorage.setItem("loadVideoFirst", "true");
-            LOADVIDEOFIRST.innerHTML = "Load video first: true";
-        } else {
-            localStorage.setItem("loadVideoFirst", "false");
-            LOADVIDEOFIRST.innerHTML = "Load video first: false";
-        }
-    }
 }

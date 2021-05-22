@@ -131,8 +131,8 @@ h4 {
     justify-content: center;
 }
 
-.topItems:nth-child(2) > span { margin: 0 auto 0 18%; }
-.topItems:nth-child(4) > span { margin: 0 20% 0 auto; }
+.topItems:nth-child(2) > span { margin: 0 auto 0 14%; display: flex; align-items: center; }
+.topItems:nth-child(4) > span { margin: 0 20% 0 auto; display: flex; align-items: center; }
 
 /*   <a> tag tekstu stilius, neskaitant "home" mygtuko   */
 .topWords {
@@ -142,55 +142,7 @@ h4 {
     text-decoration: none;
 }
 
-/*   MAPMENU   */
-#mapMenu {
-    display: none;
-    font-size: 3em;
-    margin-right: 2vw;
-    cursor: pointer;
-}
-
-@media (max-width: 850px) {
-    #mapMenu {
-        display: inline-block;
-    }
-}
-
-#mapMenuButton {
-    position: fixed;
-    cursor: pointer;
-    top: 1em;
-    right: 1em;
-    z-index: 3;
-    /* background-color: rgb(204, 134, 20, 1); */
-    background-color: white;
-    padding: 4px
-}
-
-.mapMenuItems {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    z-index: 4;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.mapMenuItems div {
-    background-color: rgb(204, 134, 20, 1);
-    color: #f3f3f3;
-    border-radius: 5px;
-    user-select: none;
-    cursor: pointer;
-    margin: 1em 0;
-    padding: 0.2em 0.5em
-}
-
-
-
-.logo {
-    cursor: pointer;
+.logo img {
     width: 8em;
 }
 
@@ -249,8 +201,15 @@ h4 {
 
 /*   settings mygtukas   */
 #settingsButton {
-    border-radius: 1em;
     margin-left: 4vw;
+    cursor: pointer;
+}
+
+/*   MAPMENU   */
+#mapMenu {
+    display: none;
+    font-size: 3em;
+    margin-right: 2vw;
     cursor: pointer;
 }
 
@@ -259,12 +218,12 @@ h4 {
 .settings {
     display: none;
     position: absolute;
+    margin-top: 1em;
+    margin-right: 4%;
     right: 0;
-    top: 12%;
-    right: 5%;
     z-index: 3;
     background-color: #e4e2e0fa;
-    width: 15%;
+    width: 14em;
     opacity: 0.9;
     user-select: none;
     border-top: 3px solid #b69e17;
@@ -546,4 +505,65 @@ footer {
     background-color:#dddcd7;
     height: 50vh;
     text-align: center;
+}
+
+
+
+@media (max-width: 850px) {
+    #mapMenu {
+        display: inline-block;
+        align-self: center;
+    }
+
+    #mapMenuBackground {
+        visibility: visible;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    #mapMenuButton {
+        position: fixed;
+        cursor: pointer;
+        top: 1em;
+        right: 1em;
+        z-index: 3;
+        /* background-color: rgb(204, 134, 20, 1); */
+        background-color: white;
+        padding: 4px
+    }
+    
+    .mapMenuItems {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 4;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .mapMenuItems div {
+        background-color: rgb(204, 134, 20);
+        color: #f3f3f3;
+        border-radius: 5px;
+        user-select: none;
+        cursor: pointer;
+        margin: 1em 0;
+        padding: 0.2em 0.5em
+    }
+
+    #mapMenuNavLinks {
+        left: 75%;
+    }
+    #mapMenuNavLinks div {
+        background-color: rgb(129, 102, 61)
+    }
+
+    .navLinks { display: none; }
+    #homeBtn {  display: none; }
+    .topItems:nth-child(2) > span { margin: 0 auto 0 4%; }
+    .logo { margin-right: 10%; }
+    .topItems:nth-child(4) > span { margin: 0 10% 0 auto; }
+
+    .mapIconList { display: none; }
 }
