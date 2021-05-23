@@ -243,4 +243,5 @@ p {
     .layout {
         grid-template-columns: repeat(1, 1fr);
     }
+    main { margin: 3vw 6vw; width: auto; }
 }

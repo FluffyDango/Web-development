@@ -121,7 +121,6 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5% 0;
     background-color: #F0EDE9FA;
 }
 
@@ -208,7 +207,7 @@ h4 {
 /*   MAPMENU   */
 #mapMenu {
     display: none;
-    font-size: 3em;
+    font-size: 2.5rem;
     margin-right: 2vw;
     cursor: pointer;
 }
@@ -397,9 +396,13 @@ main {
 /*   popup nuotraukos pozicija  */
 .popupPhoto {
     display: flex;
-    position: relative;
-    max-width: 73%;
-    margin: 0 auto;
+    position: absolute;
+    width: 73%;
+    max-width: 73vw;
+    max-height: 80%;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
 }
 
@@ -467,7 +470,7 @@ main {
     position: absolute;
     display: inline-block;
     visibility: hidden;
-    top: 48%;
+    top: 50%;
     transform: translateY(-50%);
     right: 3.2%;
     width: 7%;
@@ -563,7 +566,10 @@ footer {
     #homeBtn {  display: none; }
     .topItems:nth-child(2) > span { margin: 0 auto 0 4%; }
     .logo { margin-right: 10%; }
+    .logo img { width: 7em; }
     .topItems:nth-child(4) > span { margin: 0 10% 0 auto; }
 
     .mapIconList { display: none; }
+    .popupPhoto { width: 85%; }
+    #smokeBtns {  }
 }

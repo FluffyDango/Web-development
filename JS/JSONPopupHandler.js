@@ -45,7 +45,10 @@ function loadSmokeBoxMap (loc, id) {
     }
 
     // nuotrauka ir views
-    result += "</h3><i class='";
+    result += "</h3><img src='" + map[loc][id].img[0] + "'>";
+
+    result += "<h3 id='views'>tickrate " + map[loc][id].tickrate + "</h3><div class ='decorationNade'><i class='"
+
     if (localStorage.getItem("typeActive") === "smoke") {
         result += "fas fa-cloud fa-10x"
     } else if (localStorage.getItem("typeActive") === "molotov") {
@@ -56,7 +59,8 @@ function loadSmokeBoxMap (loc, id) {
         result += "fas fa-bomb fa-10x"
     }
 
-    result += "'></i><img src='" + map[loc][id].img[0] + "'></img><h3 id='views'>tickrate " + map[loc][id].tickrate + "</h3></div>";
+
+    result += "'></i></div></div>";
 }
 
 function clearPopup() {

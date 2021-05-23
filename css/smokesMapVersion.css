@@ -132,7 +132,7 @@
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     column-gap: 2%;
-    margin: 0 3em;
+    margin: 0 3%;
     row-gap: 5%;
 }
 
@@ -171,12 +171,15 @@
 .smokeBoxMap [class^="fas fa-fire fa-10x"],
 .smokeBoxMap [class^="fas fa-bolt fa-10x"],
 .smokeBoxMap [class^="fas fa-bomb fa-10x"] {
-    position: absolute;
-    top: 8.5%;
-    left: 0;
-    right: 0;
-    font-size: 12vw;
+    font-size: 11em;
     opacity: 0.5;
+}
+.decorationNade {
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .smokeBoxMap [class^="fas fa-cloud fa-10x"] {
@@ -219,6 +222,18 @@
 }
 
 @media (max-width: 850px) {
-    .pageBox { height: 45em; }
-    .smokeIcon { font-size: 1.5em; }
+    .pageBox { height: 25em; }
+    .smokeIcon { font-size: 1em; }
+    .filterList { left: 0; transform: translateY(-50%); }
+    #smokeTitle { font-size: 2em; }
+
+    .smokesListMap { grid-template-columns: repeat(2, 1fr) }
+    .smokeBoxMap [class^="fas fa-cloud fa-10x"],
+    .smokeBoxMap [class^="fas fa-fire fa-10x"],
+    .smokeBoxMap [class^="fas fa-bolt fa-10x"],
+    .smokeBoxMap [class^="fas fa-bomb fa-10x"] {
+        font-size: 6em;
+        opacity: 0.5;
+    }
+
 }

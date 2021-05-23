@@ -66,6 +66,7 @@ function closeMapMenu() {
     document.getElementById('mapMenuBackground').remove();
     document.getElementById('mapMenuButton').remove();
     document.getElementsByClassName('mapMenuItems')[0].remove();
+    document.getElementById('mapMenuNavLinks').remove();
 }
 
 function copyToClipboard(id) {
