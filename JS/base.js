@@ -37,19 +37,19 @@ function openMapMenu() {
         <div onclick="chPathName('inferno');">Inferno</div>
         <div onclick="chPathName('overpass');">Overpass</div>
         <div onclick="chPathName('dust2');">Dust 2</div>
-        <div onclick="chPathName('cache');>Cache</div>
-        <div onclick="chPathName('train');>Train</div>
-        <div onclick="chPathName('nuke');>Nuke</div>
-        <div onclick="chPathName('vertigo');>Vertigo</div>`;
+        <div onclick="chPathName('cache');">Cache</div>
+        <div onclick="chPathName('train');">Train</div>
+        <div onclick="chPathName('nuke');">Nuke</div>
+        <div onclick="chPathName('vertigo');">Vertigo</div>`;
     } else {
         mapMenuItems.innerHTML = `<div onclick="updatePage('mirage', 1);">Mirage</div>
         <div onclick="updatePage('inferno', 1);">Inferno</div>
         <div onclick="updatePage('overpass', 1);">Overpass</div>
         <div onclick="updatePage('dust2', 1);">Dust 2</div>
-        <div onclick="updatePage('cache', 1);>Cache</div>
-        <div onclick="updatePage('train', 1);>Train</div>
-        <div onclick="updatePage('nuke', 1);>Nuke</div>
-        <div onclick="updatePage('vertigo', 1);>Vertigo</div>`;
+        <div onclick="updatePage('cache', 1);">Cache</div>
+        <div onclick="updatePage('train', 1);">Train</div>
+        <div onclick="updatePage('nuke', 1);">Nuke</div>
+        <div onclick="updatePage('vertigo', 1);">Vertigo</div>`;
     }
     document.body.appendChild(mapMenuItems);
 

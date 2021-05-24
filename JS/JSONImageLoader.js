@@ -4,6 +4,8 @@ function getDataImg(loc, id) {
         images = map[loc][id].img;
         instructions = map[loc][id].thrdesc;
 
+        simpleBar.unMount();
+
         document.getElementById('smokeTitle').innerHTML = map[loc].title + " " + localStorage.getItem('typeActive');
         document.getElementById('imgSrc').src = images[0];
         IMGBACKICON.style.visibility = "visible";

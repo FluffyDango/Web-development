@@ -23,6 +23,8 @@ const SMOKEICONHOLDER = document.getElementById('smokeIconHolder');
 const SMOKESHARE = document.getElementById('smokeShare');
 const SMOKESHAREBTN = document.getElementById('smokeShareBtn');
 
+const simpleBar = new SimpleBar(document.getElementById('popup'));
+
 function escapePopup(event) {
     if (event.key === 'Escape') {
         hidePopup('mainPopup');

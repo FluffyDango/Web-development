@@ -5,6 +5,8 @@ let result;
 function getData(loc) {
     result = "";
 
+    // simpleBar.getContentElement();
+
     if (typeof map[loc] === "undefined") {
         SMOKETITLE.innerHTML = "undefined";
     } 

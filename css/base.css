@@ -238,7 +238,7 @@ p {
 /*   SETTINGS PABAIGA   */
 
 
-@media (max-width: 850px) {
+@media (max-width: 850px), (max-height: 540px) {
     .quickNavigation { display: none; }
     .layout {
         grid-template-columns: repeat(1, 1fr);

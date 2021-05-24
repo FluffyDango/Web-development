@@ -352,9 +352,10 @@ main {
     left: 0;
     right: 0;
     margin: auto;
+    max-width: 90em;
     width: 90%;
     height: 90%;
-    background-color: rgba(241, 236, 231, 0.95);
+    background-color: #f1ece7f2;
     vertical-align: middle;
     border-radius: 5px;
 }
@@ -362,6 +363,14 @@ main {
 #popup {
     transform: scale(0);
     transition: transform 0.2s ease 0s;
+}
+
+.simplebar-content {
+    margin-bottom: 12em;
+}
+
+.simplebar-track {
+    margin-top: 3.5em;
 }
 
 /*   popup uždarymo mygtukas   */
@@ -397,9 +406,14 @@ main {
 .popupPhoto {
     display: flex;
     position: absolute;
+    /* max-width: 56.25vw; */
+    max-height: 80vh;
     width: 73%;
-    max-width: 73vw;
-    max-height: 80%;
+    /* padding-top: 56.25%; */
+    /* width: auto; */
+    /* height: 45%; */
+    object-fit: contain;
+    
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -412,6 +426,7 @@ main {
 
 .popupPhoto img, video {
     width: 100%;
+    object-fit: contain;
 }
 
 /*   popup pirmyn ir atgal rodykles   */
@@ -476,7 +491,6 @@ main {
     width: 7%;
 
     font-family: 'Montserrat';
-    font-weight: 700;
     font-weight: bold;
     font-style: italic;
     font-size: 0.8em;
@@ -512,7 +526,7 @@ footer {
 
 
 
-@media (max-width: 850px) {
+@media (max-width: 850px), (max-height: 540px) {
     #mapMenu {
         display: inline-block;
         align-self: center;
@@ -570,6 +584,4 @@ footer {
     .topItems:nth-child(4) > span { margin: 0 10% 0 auto; }
 
     .mapIconList { display: none; }
-    .popupPhoto { width: 85%; }
-    #smokeBtns {  }
 }
