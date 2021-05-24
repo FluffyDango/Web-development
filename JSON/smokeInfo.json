@@ -314,7 +314,10 @@
                 }
             },
             {
-                "title": "Catwalk one-way"
+                "title": "Catwalk one-way",
+                "1": {
+                    
+                }
             },
             {
                 "title": "Window",
@@ -377,7 +380,10 @@
                 }
             },
             {
-                "title": "Top-mid cross"
+                "title": "Top-mid cross",
+                "1": {
+                    
+                }
             },
             {
                 "title": "Upper connector",
@@ -419,34 +425,64 @@
                 }
             },
             {
-                "title": "Jungle deep"
+                "title": "Jungle deep",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Jungle"
+                "title": "Jungle",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Stairs"
+                "title": "Stairs",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Ramp out One-way"
+                "title": "Ramp out One-way",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Ramp"
+                "title": "Ramp",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Ramp deep"
+                "title": "Ramp deep",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Ticket"
+                "title": "Ticket",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Tripple box"
+                "title": "Tripple box",
+                "1": {
+                    
+                }
             },
             {
-                "title": "A site middle"
+                "title": "A site middle",
+                "1": {
+                    
+                }
             },
             {
-                "title": "Palace"
+                "title": "Palace",
+                "1": {
+                    
+                }
             }
         ],
 
@@ -1724,6 +1760,27 @@
 
     "dust2": {
         "smoke": [
+            {   
+                "title": "Plat",
+                "1": {
+                    "from": "tracks",
+                    "tickrate": "128 64",
+                    "oneway": false,
+                    "img":
+                    [
+                        "../images/Smokes/Overpass/overpass_monster1_before1.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_before2.jpg",
+                        "../images/Smokes/Overpass/overpass_monster1_after.jpg"
+                    ],
+                    "thrdesc":
+                    [
+                        "1. Crouch",
+                        "2. Stand-up and jumpthrow",
+                        "result"
+                    ],
+                    "videoSrc": ""
+                }
+            },
             {   
                 "title": "Plat",
                 "1": {
