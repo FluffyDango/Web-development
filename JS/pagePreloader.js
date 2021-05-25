@@ -45,6 +45,7 @@ function preloadPage() {
         localStorage.setItem('currentMap', 'mirage');
     }
     updatePage(localStorage.getItem('currentMap'));
+    getIconData();
 }
 
 

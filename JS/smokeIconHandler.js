@@ -4,7 +4,7 @@ let mapIcons;
 let map;
 
 function getIconData() {
-    mapIcons = ICONdata[localStorage.getItem('currentMap')][localStorage.getItem("typeActive")];
+    mapIcons = ICONdata[localStorage.getItem('currentMap')][localStorage.getItem('typeActive')];
     map = JSONdata[localStorage.getItem('currentMap')][localStorage.getItem('typeActive')];
 
     SMOKEICONHOLDER.innerHTML = "";

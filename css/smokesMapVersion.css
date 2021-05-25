@@ -142,8 +142,6 @@
     cursor: pointer;
     user-select: none;
     align-self: center;
-    /* background-color: #e4e4e4; */
-    /* background-color: #d88686; */
     /* border: #3D3D3D 3px blur(3px); */
     border-radius: 0.4em;
     transition: all 0.2s ease 0.1s;
@@ -205,9 +203,9 @@
 
 #views {
     position: relative;
-    font-size: .6em;
+    font-size: 0.6em;
     text-align: start;
-    margin: 1em 0 1em 3em;
+    margin: 0.2em 0 1em 3em;
     z-index: 1000;
 }
 
